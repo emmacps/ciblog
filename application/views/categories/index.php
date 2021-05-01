@@ -1,4 +1,4 @@
-<h2><?= $title; ?></h2>
+filescat<h2><?= $title; ?></h2>
 
 <ul class="list-group">
   <?php foreach($categories as $category): ?>

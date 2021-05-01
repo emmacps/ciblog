@@ -8,3 +8,14 @@
 .post-thump{
   width: 100%;
 }
+
+.pagination-links{
+  margin: 30px;
+}
+
+a.pagination-link{
+  padding: 8px 13px;
+  margin: 5px;
+  backgroup: #f4f4f4;
+  border: 1px #ccc solid;
+}

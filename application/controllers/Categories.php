@@ -12,6 +12,10 @@
     }
 
     public function create(){
+      //check login
+      if(!$this->session->userdata('logged_in')){
+        redirect('users/login');
+      }
 
       $data['title'] = 'Create Category';
 
@@ -23,6 +27,8 @@
         $this->load->view('templates/footer');
       }else{
         $this->category_model->create_category();
+        //Set message
+        $this->session->set_flashdata('category_created', 'Your category has been created');
         redirect('categories');
       }
     }
