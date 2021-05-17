@@ -1,7 +1,7 @@
 <h2><?php echo $post['title']; ?></h2>
 
 <div class="post-body">
-  <img class="post-thump" src="<?php echo site_url(); ?>assets/images/posts/<?php echo $post['post_image']; ?>" alt="">
+  <img class="img-fluid" src="<?php echo site_url(); ?>assets/images/posts/<?php echo $post['post_image']; ?>" alt="">
   <small class="post-date">Posted on: <?php echo $post['created_at']; ?></small>
   <b><?php // echo $post['name']; ?></b>
   <?php echo $post['body']; ?>
@@ -12,9 +12,9 @@
 <a href="<?php echo base_url(); ?>posts/edit/<?php echo $post['slug'] ?>" class="btn btn-danger">Edit</a>
 
 <?php echo form_open('/posts/delete/'.$post['id']); ?>
-<input type="submit" name="" value="Delete" name="btn btn-danger">
+<input type="submit" name="" value="Delete" class="btn btn-danger">
 </form>
- <?php endif; ?>
+ <?php endif; ?> 
 
 <hr>
 <h3>Comments</h3>
@@ -42,7 +42,7 @@
 	</div>
 	<div class="form-group">
 		<label>Email</label>
-		<input type="text" name="email" class="form-control">
+		<input type="email" name="email" class="form-control">
 	</div>
 	<div class="form-group">
 		<label>Body</label>
